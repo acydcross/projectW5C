@@ -1,0 +1,6 @@
+@mixin animate-font($font-size) {
+    font-size: $font-size;
+    font-weight: bold;
+    color: purple;
+    transition: all 1s ease-in-out;
+}

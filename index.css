@@ -1,91 +1,147 @@
 @media only screen and (min-width: 500px) {
-    #grid-container {
-        background-color: burlywood;
-    }
+  #grid-container {
+    background-color: burlywood;
+  }
 }
 
 @media only screen and (min-width: 720px) {
-    #grid-container {
-        background-color: coral;
-    }
+  #grid-container {
+    background-color: coral;
+  }
+}
+
+@-webkit-keyframes imageAnimation {
+  0% {
+    background-color: red;
+    opacity: 0;
+    font-size: 10px;
+  }
+  25% {
+    background-color: red;
+    opacity: 1;
+    font-size: 15px;
+  }
+  50% {
+    background-color: yellow;
+    opacity: 1;
+    font-size: 20px;
+  }
+  100% {
+    background-color: red;
+    opacity: 1;
+    font-size: 25px;
+  }
 }
 
 @keyframes imageAnimation {
-    0%   {
-        background-color: red;
-        opacity: 0;
-        font-size: 10px;
-    }
-    25%  {
-        background-color: red;
-        opacity: 1;
-        font-size: 15px;
-    }
-    50%  {
-        background-color: yellow;
-        opacity: 1;
-        font-size: 20px;
-    }
-    100% {
-        background-color: red;
-        opacity: 1;
-        font-size: 25px;
-    }
+  0% {
+    background-color: red;
+    opacity: 0;
+    font-size: 10px;
+  }
+  25% {
+    background-color: red;
+    opacity: 1;
+    font-size: 15px;
+  }
+  50% {
+    background-color: yellow;
+    opacity: 1;
+    font-size: 20px;
+  }
+  100% {
+    background-color: red;
+    opacity: 1;
+    font-size: 25px;
+  }
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #grid-container {
-    display: grid;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 100vh;
 }
 
 body {
-    display: grid;
-    align-items: center;
-    justify-items: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
 }
 
 #header {
-    background-color: orange;
-    width: 100%;
-    min-height: 10vh;
-    display: grid;
-    grid-template-columns: 20% 50% 10% 10% 10%;
-    }
+  background-color: orange;
+  width: 100%;
+  min-height: 10vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 50% 10% 10% 10%;
+      grid-template-columns: 20% 50% 10% 10% 10%;
+}
 
 #content {
-    width: 90%;
-    min-height: 50vh;
-    display: grid;
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 50% 50%;
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
+  width: 90%;
+  min-height: 50vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+#content h1 {
+  color: gold;
+}
+
+#content h1:hover {
+  font-size: 3em;
+  font-weight: bold;
+  color: purple;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #content-2 {
-    left: 50vw;
+  left: 50vw;
 }
 
 #footer {
-    background-color: orange;
-    min-height: 10vh;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10vh;
-    width: 90%;
+  background-color: orange;
+  min-height: 10vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15vh;
+  width: 90%;
 }
 
 #header-logo {
-    background-color: orange;
-    height: 10vh;
+  background-color: orange;
+  height: 10vh;
 }
 
 .Pizza-Images:hover {
-    animation-name: imageAnimation;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
+  -webkit-animation-name: imageAnimation;
+          animation-name: imageAnimation;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
 }
+/*# sourceMappingURL=index.css.map */
